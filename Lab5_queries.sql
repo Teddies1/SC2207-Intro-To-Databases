@@ -20,7 +20,7 @@ FROM Graduate as X, Professor as Y, Research as Z
 WHERE X.Professor_ID = Y.Person_ID 
 AND X.Student_ID = Z.Student_ID
 GROUP BY X.Student_ID
-HAVING COUNT(X.Student_ID)  1 AND COUNT(Z.Lab_Name)  1
+HAVING COUNT(X.Student_ID) = 1 AND COUNT(Z.Lab_Name) = 1
 
 
 --4. Find all professors who teach more than one courses in the semester. 
@@ -30,7 +30,7 @@ FROM Professor as X, Person as Y, Teach as Z
 WHERE Z.Professor_ID = X.Person_ID
 AND X.Person_ID = Y.Person_ID
 GROUP BY X.Person_ID
-HAVING COUNT(Z.Course_ID)  1
+HAVING COUNT(Z.Course_ID) = 1
 
 
 --5. List all the equipment belonging to a particular laboratory.
