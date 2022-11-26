@@ -35,7 +35,7 @@ HAVING COUNT(Z.Course_ID)  1
 
 --5. List all the equipment belonging to a particular laboratory.
  
---if let’s say it’s Software Lab 1 in SCSE
+--if say it’s Software Lab 1 in SCSE
 
 SELECT  
 FROM Equipment as X, Models as Y
